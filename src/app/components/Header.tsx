@@ -1,11 +1,12 @@
 'use client';
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const {setTheme, resolvedTheme } = useTheme();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -16,8 +17,8 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="flex items-center justify-around py-8 bg-blue-600 text-white dark:bg-gray-800 dark:text-gray-200">
-      <a href="/" className="text-xl font-semibold mx-4">Friat Weldekidan</a>
+    <header className="flex items-center justify-around py-8 bg-blue-600 text-white dark:bg-gray-500 dark:text-gray-200">
+      <Link href="/" className="text-xl font-semibold mx-4">Friat Weldekidan</Link>
 
       {/* Mobile menu button */}
       <button
@@ -31,9 +32,9 @@ const Header: React.FC = () => {
       </button>
       
       <nav className={`lg:flex lg:block ${isMenuOpen ? 'block' : 'hidden'}`}>
-        <a href="#about" className="mx-4 my-2 lg:my-0">About Me</a>
-        <a href="#portfolio" className="mx-4 my-2 lg:my-0">Portfolio</a>
-        <a href="#contact" className="mx-4 my-2 lg:my-0">Contact</a>
+        <Link href="#about" className="mx-4 my-2 lg:my-0">About Me</Link>
+        <Link href="#portfolio" className="mx-4 my-2 lg:my-0">Portfolio</Link>
+        <Link href="#contact" className="mx-4 my-2 lg:my-0">Contact</Link>
       </nav>    
 
       {/* Dark mode toggle button */}

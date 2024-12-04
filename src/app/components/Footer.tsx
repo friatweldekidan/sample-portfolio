@@ -1,4 +1,5 @@
 import { FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
@@ -9,30 +10,30 @@ const Footer: React.FC = () => {
           <p className="mb-2">Phone: +251 92 064 1902</p>
           <p>Email: friatweld@gmail.com</p>
           <div className="flex mt-4">
-            <a
+            <Link
               href="https://www.linkedin.com/in/friat-weldekidan/"
               className="mr-2 text-gray-800 hover:text-gray-900"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin size={24} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://github.com/friatweldekidan"
               className="mx-2 text-gray-800 hover:text-gray-900"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGithub size={24} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://friat-folio-omega.vercel.app/projects"
               className="mx-2 text-gray-800 hover:text-gray-900"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaGlobe size={24} />
-            </a>
+            </Link>
           </div>
         </div>
       </section>

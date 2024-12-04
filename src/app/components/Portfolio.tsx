@@ -1,3 +1,6 @@
+import Link from 'next/link';
+
+
 const projects = [
   {
     id: 1,
@@ -43,9 +46,9 @@ const Portfolio: React.FC = () => {
             />
             <h3 className="font-bold text-lg mb-2">{project.name}</h3>
             <p className="mb-4">{project.description}</p>
-            <a href={project.link} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+            <Link href={project.link} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
               View Project
-            </a>
+            </Link>
           </div>
         ))}
       </div>
