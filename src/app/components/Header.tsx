@@ -1,26 +1,22 @@
 'use client';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaMoon, FaSun } from 'react-icons/fa';
+import { useTheme } from 'next-themes';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    if (!isDarkMode) {
-      document.body.classList.add('dark-mode');  
-    } else {
-      document.body.classList.remove('dark-mode');  
-    }
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
 
   return (
-    <header className="flex items-center justify-around py-8 bg-blue-600 text-white">
+    <header className="flex items-center justify-around py-8 bg-blue-600 text-white dark:bg-gray-800 dark:text-gray-200">
       <a href="/" className="text-xl font-semibold mx-4">Friat Weldekidan</a>
 
       {/* Mobile menu button */}
@@ -42,7 +38,7 @@ const Header: React.FC = () => {
 
       {/* Dark mode toggle button */}
       <button onClick={toggleDarkMode}>
-        {isDarkMode ? <FaSun className="text-white" /> : <FaMoon className="text-white" />}
+        {resolvedTheme === 'dark' ? <FaSun className="text-white" /> : <FaMoon className="text-white" />}
       </button>
     </header>
   );

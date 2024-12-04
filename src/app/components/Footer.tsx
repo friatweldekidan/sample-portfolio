@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 const Footer: React.FC = () => {
   return (
     <>
-      <section id="contact" className="px-24 py-12 bg-blue-400 text-gray-800">
+      <section id="contact" className="px-24 py-12 bg-blue-400 text-gray-800  dark:bg-gray-400 dark:text-gray-200 ">
         <h2 className="text-2xl text-white font-bold mb-6">Contact Me</h2>
         <div className="text-white mt-4">
           <p className="mb-2">Phone: +251 92 064 1902</p>
