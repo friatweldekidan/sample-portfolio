@@ -19,7 +19,7 @@ const projects = [
   {
     id: 3,
     name: 'Import Export Website',
-    description: 'I developed a website for an import and export company using Next.js.',
+    description: 'I developed a website for an import and export company using Html and CSS.',
     link: 'https://lijuimportexport.com/',
     img: '/projects/img3.png',
   },
