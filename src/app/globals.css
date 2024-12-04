@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+ 
 :root {
   --bg-color-light: white;
   --text-color-light: black;
+  --bg-color-dark: #1a202c;  
+  --text-color-dark: white;   
 }
 
 body {
@@ -13,11 +16,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-body {
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.dark {
-  background-color: #121212;
-  color: white;
+.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
 }

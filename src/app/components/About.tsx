@@ -3,14 +3,14 @@ import Image from "next/image";
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="px-6 py-12 bg-white text-gray-800">
+    <section id="about" className="px-24 py-12 bg-white text-gray-800">
       <div className="container flex flex-col md:flex-row items-center">
         <Image
           src="/FR.png"
           alt="Profile Photo"
           width={400}
           height={400}
-          className="rounded-full" // Add rounding to the profile photo
+          className="rounded-full" 
         />
         <div className="mt-4 md:mt-0 md:ml-8">
           <h2 className="text-2xl font-bold mb-2">About Me</h2>

@@ -31,7 +31,7 @@ const projects = [
 
 const Portfolio: React.FC = () => {
   return (
-    <section id="portfolio" className="px-12 py-12 bg-white text-gray-800">
+    <section id="portfolio" className="px-24 py-12 bg-white text-gray-800">
       <h2 className="text-2xl font-bold mb-6">Portfolio</h2>
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
