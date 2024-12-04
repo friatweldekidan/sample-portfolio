@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="px-24 py-12 bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-200">
+    <section id="about" className="px-24 py-12 bg-white text-gray-800 dark:bg-gray-200 dark:text-gray-800">
       <div className="container flex flex-col md:flex-row items-center">
         <Image
           src="/FR.png"

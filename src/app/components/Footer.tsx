@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Footer: React.FC = () => {
   return (
     <>
-      <section id="contact" className="px-24 py-12 bg-blue-400 text-gray-800  dark:bg-gray-400 dark:text-gray-200 ">
+      <section id="contact" className="px-24 py-12 bg-blue-400 text-gray-800  dark:bg-gray-800 dark:text-gray-200 ">
         <h2 className="text-2xl text-white font-bold mb-6">Contact Me</h2>
         <div className="text-white mt-4">
           <p className="mb-2">Phone: +251 92 064 1902</p>
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </section>
-      <section id="copyright" className="px-12 py-3 bg-gray-800 text-white">
+      <section id="copyright" className="px-12 py-3 bg-gray-800 dark:bg-gray-900 text-white">
         <h2 className="text-lg text-center">© 2024 Friat Weldekidan. All rights reserved.</h2>
       </section>
     </>

@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="flex items-center justify-around py-8 bg-blue-600 text-white dark:bg-gray-500 dark:text-gray-200">
+    <header className="flex items-center justify-around py-8 bg-blue-600 text-white dark:bg-gray-800 dark:text-gray-200">
       <Link href="/" className="text-xl font-semibold mx-4">Friat Weldekidan</Link>
 
       {/* Mobile menu button */}
