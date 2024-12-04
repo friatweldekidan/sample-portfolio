@@ -1,32 +1,36 @@
-'use client'
-import React, { useState, useEffect } from 'react';
+'use client';
+import React, { useState } from "react";
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 const Header: React.FC = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    document.documentElement.classList.toggle('dark', newDarkMode);
-    localStorage.setItem('darkMode', JSON.stringify(newDarkMode));
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  useEffect(() => {
-    const savedDarkMode = JSON.parse(localStorage.getItem('darkMode') || 'false');
-    setDarkMode(savedDarkMode);
-    document.documentElement.classList.toggle('dark', savedDarkMode);
-  }, []);
-
   return (
-    <header className="flex items-center justify-around p-6 bg-blue-600 dark:bg-blue-900 text-white">
-      <a href="/" className="mx-4">Friat Weldekidan</a>
-      <nav>
-        <a href="#about" className="mx-4">About Me</a>
-        <a href="#portfolio" className="mx-4">Portfolio</a>
-        <a href="#contact" className="mx-4">Contact</a>
-      </nav>
-      <button onClick={toggleDarkMode} className="p-2 bg-blue-700 rounded-full">
-        {darkMode ? '🌙' : '☀️'}
+    <header className="flex items-center justify-between p-8 bg-blue-600 text-white">
+      <a href="/" className="text-xl font-semibold mx-4">Friat Weldekidan</a>
+      
+      {/* Mobile menu button */}
+      <button
+        className="lg:hidden p-2 bg-blue-700 rounded-full"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        <span className="block w-6 h-0.5 bg-white mb-1"></span>
+        <span className="block w-6 h-0.5 bg-white mb-1"></span>
+        <span className="block w-6 h-0.5 bg-white"></span>
+      </button>
+      
+      <nav className={`lg:flex lg:block ${isMenuOpen ? 'block' : 'hidden'}`}>
+        <a href="#about" className="mx-4 my-2 lg:my-0">About Me</a>
+        <a href="#portfolio" className="mx-4 my-2 lg:my-0">Portfolio</a>
+        <a href="#contact" className="mx-4 my-2 lg:my-0">Contact</a>
+      </nav>    
+      <button>
+        <FaSun className="text-white" />
       </button>
     </header>
   );

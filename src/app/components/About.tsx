@@ -1,20 +1,41 @@
+'use client';
+import Image from "next/image";
+
 const About: React.FC = () => {
-    return (
-      <section id="about" className="px-6 py-12 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="w-32 h-32 mb-6 md:mb-0 md:mr-6 rounded-full bg-blue-300 dark:bg-blue-600"></div>
-          <div>
-            <h2 className="text-2xl font-bold">About Me</h2>
-            <p>I am a passionate frontend developer skilled in creating responsive and user-friendly interfaces.</p>
-            <ul className="mt-4">
-              <li>B.Sc. in Electromechanical Engineering - Addis Ababa Science & Tech</li>
-              <li>Certifications: MERN Stack, Responsive Web Design</li>
+  return (
+    <section id="about" className="px-6 py-12 bg-white text-gray-800">
+      <div className="container flex flex-col md:flex-row items-center">
+        <Image
+          src="/FR.png"
+          alt="Profile Photo"
+          width={400}
+          height={400}
+          className="rounded-full" // Add rounding to the profile photo
+        />
+        <div className="mt-4 md:mt-0 md:ml-8">
+          <h2 className="text-2xl font-bold mb-2">About Me</h2>
+          <p>
+            Hi, I’m Friat Weldekidan, an aspiring Front-end Developer based in Addis Ababa, Ethiopia, with a solid grasp of full-stack MERN development. I specialize in creating responsive, visually appealing web interfaces using HTML, CSS, JavaScript, and React.js. My passion lies in collaborating with teams to deliver high-quality development projects from start to finish. With experience in building robust web applications, integrating APIs, and enhancing user experiences, I am eager to bring creativity and determination to every project I undertake.
+          </p>
+          <section>
+            <h2 className="text-xl font-bold mt-4">Education</h2>
+            <ul>
+              <li>Bachelor of Science: Electromechanical Engineering, University of Addis Ababa Science and Technology (2012 - 2016)</li>
             </ul>
-          </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold mt-4">Certifications</h2>
+            <ul>
+              <li>Full Stack Web Development (MERN) – Evangadi Tech</li>
+              <li>Responsive Web Design – freeCodeCamp</li>
+              <li>Programming Fundamentals – Udacity</li>
+            </ul>
+          </section>
         </div>
-      </section>
-    );
-  };
-  
-  export default About;
-  
+      </div>
+    </section>
+  );
+};
+
+export default About;
