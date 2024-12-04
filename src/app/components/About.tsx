@@ -6,7 +6,7 @@ const About: React.FC = () => {
     <section id="about" className="px-24 py-12 bg-white text-gray-800 dark:bg-gray-200 dark:text-gray-800">
       <div className="container flex flex-col md:flex-row items-center">
         <Image
-          src="/FR.png"
+          src="/about/photo.png"
           alt="Profile Photo"
           width={400}
           height={400}
