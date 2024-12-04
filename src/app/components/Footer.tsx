@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           <div className="flex mt-4">
             <Link
               href="https://www.linkedin.com/in/friat-weldekidan/"
-              className="mr-2 text-gray-800 hover:text-gray-900"
+              className="mr-2 text-gray-300 hover:text-gray-900"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
             </Link>
             <Link
               href="https://github.com/friatweldekidan"
-              className="mx-2 text-gray-800 hover:text-gray-900"
+              className="mx-2 text-gray-300 hover:text-gray-900"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
             </Link>
             <Link
               href="https://friat-folio-omega.vercel.app/projects"
-              className="mx-2 text-gray-800 hover:text-gray-900"
+              className="mx-2 text-gray-300 hover:text-gray-900 "
               target="_blank"
               rel="noopener noreferrer"
             >
