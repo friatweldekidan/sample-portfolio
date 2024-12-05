@@ -32,7 +32,7 @@ const Header: React.FC = () => {
       </button>
       
       <nav className={`lg:flex lg:block ${isMenuOpen ? 'block' : 'hidden'}`}>
-        <Link href="#about" className="mx-4 my-2 lg:my-0">About Me</Link>
+        <Link href="#about" className="mx-4 my-2 lg:my-0">About</Link>
         <Link href="#portfolio" className="mx-4 my-2 lg:my-0">Portfolio</Link>
         <Link href="#contact" className="mx-4 my-2 lg:my-0">Contact</Link>
       </nav>    
